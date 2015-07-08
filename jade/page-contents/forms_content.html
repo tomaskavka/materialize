@@ -14,32 +14,42 @@
         <br>
         <div class="row">
           <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
+            <fieldset>
+              <legend>Vaše dítě</legend>
+
+              <div class="row">
+                <div class="input-field col s6">
+                  <label for="firstName">Křestní jméno</label> 
+                  <input id="firstName" type="text" class="validate">
+                  <div class="indicators">
+                    <i class="indicator success material-icons">check</i>
+                    <i class="indicator error material-icons">error_outline</i>
+                  </div>
+                  <div class="help-text hint">Křestní jméno Vašeho dítěte, např.: <strong>Roman</strong></div>
+                </div>
+
+                <div class="input-field col s6">
+                  <label for="lastName">Příjmení</label>
+                  <input id="lastName" type="text">
+                  <div class="indicators">
+                    <i class="indicator success material-icons">check</i>
+                    <i class="indicator error material-icons">error_outline</i>
+                  </div>
+                  <div class="help-text hint">Příjmení Vašeho dítěte, např.: <strong>Šebrle</strong></div>
+                </div>
               </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text">
-                <label for="last_name">Last Name</label>
-              </div>
-            </div>
+            </fieldset>
+
             <div class="row">
               <div class="input-field col s12">
+              <label for="disabled">Disabled</label>
                 <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                <label for="disabled">Disabled</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
                 <label for="password">Password</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email" data-error="wrong" data-success="right">Email</label>
+                <input id="password" type="password" class="validate">
               </div>
             </div>
           </form>

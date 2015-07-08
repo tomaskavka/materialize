@@ -1,8 +1,26 @@
 (function ($) {
   $(document).ready(function() {
-
+    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
+    $(input_selector)
+      .addClass('pristine')
+      .on('focus', function() {
+        $(this).parent().addClass('focus');
+      })
+      .on('blur', function() {
+        if ($(this).attr('id') === 'firstName') {
+          $(this).parent().addClass('valid');
+          $('.help-text', $(this).parent()).removeClass('hint').addClass('success').html('Skvěle, křestní jméno Vašeho dítěte je v pořádku!');
+        }
+        else {         
+          $(this).parent().addClass('invalid');
+          $('.help-text', $(this).parent()).removeClass('hint').addClass('error').html('Vyplňte prosím příjmení Vašeho dítěte, např.: <strong>Šebrle</strong>');
+        }
+        $(this).parent().removeClass('focus');
+        $(this).parent().removeClass('pristine');
+        $(this).parent().addClass('dirty');
+      });
     // Function to update labels of text fields
-    Materialize.updateTextFields = function() {
+    /*Materialize.updateTextFields = function() {
       var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
       $(input_selector).each(function(index, element) {
         if ($(element).val().length > 0 || $(this).attr('placeholder') !== undefined || $(element)[0].validity.badInput === true) {
@@ -89,7 +107,7 @@
           }
         }
       }
-    };
+    };*/
 
 
     // Textarea Auto Resize

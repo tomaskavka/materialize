@@ -45,14 +45,17 @@ $icons-font-path: "../font/material-design-icons/" !default;
 
 /*** Forms ***/
 // Text Inputs + Textarea
-$input-border-color: color("grey", "base") !default;
+$input-border-color: color("grey", "lighten-2") !default;
 $input-bg-color: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
-$label-font-size: .8rem !default;
+$input-focus-color: color("grey", "darken-2") !default;
+$label-font-size: 1rem !default;
 $input-disabled-color: rgba(0,0,0, .26) !default;
 $input-disabled-solid-color: #BDBDBD !default;
+$input-indicator-size: 1.3rem !default;
+$help-text-font-size: .85rem !default;
+$legend-font-size: 1.6rem !default;
 
 // Radio Buttons
 $radio-fill-color: $secondary-color !default;
