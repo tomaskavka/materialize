@@ -7,11 +7,6 @@ button:focus {
   background-color: lighten($button-color, 4%);
 }
 
-label {
-  font-size: $label-font-size;
-  color: $input-border-color;
-}
-
 /***************************
    Text Inputs + Textarea
 ****************************/
@@ -121,10 +116,11 @@ fieldset {
 
   // Label
   label {
-    color: darken($input-border-color, 10%);
+    color: $label-font-color;
     font-size: $label-font-size;
     font-weight: 300;
     @include transition(.4s all);
+
 
     &.valid {
       color: $input-success-color;      
