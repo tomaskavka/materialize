@@ -9,33 +9,59 @@
         </p>
 
         <h2 class="header">Input fields</h2>
-        <p>Text fields allow user input. The border should light up simply and clearly indicating which field the user is currently editing. You must have a <code class="language-markup">.input-field</code> div wrapping your input and label. This helps our jQuery animate the label. This is only used in our Input and Textarea form elements.</p>
-        <p>If you don't want the Green and Red validation states, just remove the <code class="language-markup">validate</code> class from your inputs.</p>
+        <p>Text fields allow user input. The border should light up simply and clearly indicating which field the user is currently editing. You must have a <code class="language-markup">.input-field</code> div wrapping your label and input. <s>This helps our jQuery animate the label</s>. This is only used in our Input and Textarea form elements.</p>
+        <p><s>If you don't want the Green and Red validation states, just remove the <code class="language-markup">validate</code> class from your inputs.</s></p>
         <br>
         <div class="row">
           <form class="col s12">
             <fieldset>
-              <legend>Vaše dítě</legend>
+              <legend>Your child</legend>
 
               <div class="row">
                 <div class="input-field col s6">
-                  <label for="firstName">Křestní jméno</label> 
-                  <input id="firstName" type="text" class="validate">
+                  <label for="firstName">First name</label>
+                  <input id="firstName" type="text" />
                   <div class="indicators">
                     <i class="indicator success material-icons">check</i>
                     <i class="indicator error material-icons">error_outline</i>
+                    <i class="indicator warning material-icons">mood_bad</i>
                   </div>
-                  <div class="help-text hint">Křestní jméno Vašeho dítěte, např.: <strong>Roman</strong></div>
+                  <div class="help-text hint">Your child's first name, e.g. <strong><i>Mickael</i></strong>.</div>
                 </div>
 
                 <div class="input-field col s6">
-                  <label for="lastName">Příjmení</label>
-                  <input id="lastName" type="text">
+                  <label for="surname">Surname</label>
+                  <input id="surname" type="text" />
                   <div class="indicators">
                     <i class="indicator success material-icons">check</i>
                     <i class="indicator error material-icons">error_outline</i>
+                    <i class="indicator warning material-icons">mood_bad</i>
                   </div>
-                  <div class="help-text hint">Příjmení Vašeho dítěte, např.: <strong>Šebrle</strong></div>
+                  <div class="help-text hint">Your child's surname e.g. <strong><i>Tavares</i></strong>.</div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s6 optional">
+                  <label for="favouritePlayer">Favourite football player (optional)</label>
+                  <input id="favouritePlayer" type="text" />
+                  <div class="indicators">
+                    <i class="indicator success material-icons">check</i>
+                    <i class="indicator error material-icons">error_outline</i>
+                    <i class="indicator warning material-icons">mood_bad</i>
+                  </div>
+                  <div class="help-text hint">Your child's favourite football player e.g. <strong><i>Lionel Messi</i></strong>.</div>
+                </div>
+
+                <div class="input-field col s6 optional">
+                  <label for="favouriteTeam">Favourite football team (optional)</label>
+                  <input id="favouriteTeam" type="text" />
+                  <div class="indicators">
+                    <i class="indicator success material-icons">check</i>
+                    <i class="indicator error material-icons">error_outline</i>
+                    <i class="indicator warning material-icons">mood_bad</i>
+                  </div>
+                  <div class="help-text hint">Your child's favourite football team e.g. <strong><i>Slavia Prague</i></strong>.</div>
                 </div>
               </div>
             </fieldset>
@@ -43,13 +69,13 @@
             <div class="row">
               <div class="input-field col s12">
               <label for="disabled">Disabled</label>
-                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                <input disabled value="I am not editable" id="disabled" type="text">
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <label for="password">Password</label>
-                <input id="password" type="password" class="validate">
+                <input id="password" type="password">
               </div>
             </div>
           </form>
@@ -59,29 +85,29 @@
     &lt;form class="col s12">
       &lt;div class="row">
         &lt;div class="input-field col s6">
-          &lt;input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          &lt;input placeholder="Placeholder" id="first_name" type="text">
           &lt;label for="first_name">First Name&lt;/label>
         &lt;/div>
         &lt;div class="input-field col s6">
-          &lt;input id="last_name" type="text" class="validate">
+          &lt;input id="last_name" type="text">
           &lt;label for="last_name">Last Name&lt;/label>
         &lt;/div>
       &lt;/div>
       &lt;div class="row">
         &lt;div class="input-field col s12">
-          &lt;input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          &lt;input disabled value="I am not editable" id="disabled" type="text">
           &lt;label for="disabled">Disabled&lt;/label>
         &lt;/div>
       &lt;/div>
       &lt;div class="row">
         &lt;div class="input-field col s12">
-          &lt;input id="password" type="password" class="validate">
+          &lt;input id="password" type="password">
           &lt;label for="password">Password&lt;/label>
         &lt;/div>
       &lt;/div>
       &lt;div class="row">
         &lt;div class="input-field col s12">
-          &lt;input id="email" type="email" class="validate">
+          &lt;input id="email" type="email">
           &lt;label for="email">Email&lt;/label>
         &lt;/div>
       &lt;/div>
@@ -92,7 +118,7 @@
         <p>If you are having trouble with the labels overlapping prefilled content, Try adding <code class="language-markup">class="active"</code> to the label</p>
         <div class="row">
           <div class="input-field col s6">
-            <input value="Alvin" id="first_name2" type="text" class="validate">
+            <input value="Alvin" id="first_name2" type="text">
             <label class="active" for="first_name2">First Name</label>
           </div>
         </div>
@@ -100,7 +126,7 @@
         <pre><code class="language-markup">
   &lt;div class="row">
     &lt;div class="input-field col s6">
-      &lt;input value="Alvin" id="first_name2" type="text" class="validate">
+      &lt;input value="Alvin" id="first_name2" type="text">
       &lt;label class="active" for="first_name2">First Name&lt;/label>
     &lt;/div>
   &lt;/div>
@@ -109,20 +135,17 @@
         <h4>Icon Prefixes</h4>
         <p>You can add an icon prefix to make the form input label even more clear. Just add an icon with the class <code class="language-markup">prefix</code> before the input and label.</p><br>
         <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Telephone</label>
-              </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">face</i>
+            <label for="firstName">First name</label>
+            <input id="firstName" type="text" />
+            <div class="indicators">
+              <i class="indicator success material-icons">check</i>
+              <i class="indicator error material-icons">error_outline</i>
+              <i class="indicator warning material-icons">mood_bad</i>
             </div>
-          </form>
+            <div class="help-text hint">Your child's first name, e.g. <strong><i>Mickael</i></strong>.</div>
+          </div>
         </div>
 
         <pre><code class="language-markup">
@@ -131,12 +154,12 @@
       &lt;div class="row">
         &lt;div class="input-field col s6">
           &lt;i class="material-icons prefix">account_circle</i>&lt;/i>
-          &lt;input id="icon_prefix" type="text" class="validate">
+          &lt;input id="icon_prefix" type="text">
           &lt;label for="icon_prefix">First Name&lt;/label>
         &lt;/div>
         &lt;div class="input-field col s6">
           &lt;i class="material-icons prefix">phone</i>&lt;/i>
-          &lt;input id="icon_telephone" type="tel" class="validate">
+          &lt;input id="icon_telephone" type="tel">
           &lt;label for="icon_telephone">Telephone&lt;/label>
         &lt;/div>
       &lt;/div>
@@ -150,7 +173,7 @@
           <form class="col s12">
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input id="email" type="email">
                 <label for="email" data-error="wrong" data-success="right">Email</label>
               </div>
             </div>
@@ -162,7 +185,7 @@
     &lt;form class="col s12">
       &lt;div class="row">
         &lt;div class="input-field col s12">
-          &lt;input id="email" type="email" class="validate">
+          &lt;input id="email" type="email">
           &lt;label for="email" data-error="wrong" data-success="right">Email&lt;/label>
         &lt;/div>
       &lt;/div>
@@ -502,12 +525,12 @@
         <h2 class="header">Switches</h2>
         <form action="#">
         <p>
-            <div class="switch">
+          <div class="switch">
             <label>
-              Off
-              <input checked type="checkbox">
+              <span class="off">Off</span>
+              <input class="checkbox" checked type="checkbox">
               <span class="lever"></span>
-              On
+              <span class="on">On</span>
             </label>
           </div>
         </p>

@@ -6,6 +6,7 @@ $primary-color-dark: darken($primary-color, 15%) !default;
 $secondary-color: color("teal", "lighten-1") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
+$warning-color: color("orange", "lighten-1") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
 /*** Badges ***/
@@ -49,6 +50,7 @@ $input-border-color: color("grey", "lighten-2") !default;
 $input-bg-color: #fff !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
+$input-warning-color: $warning-color !default;
 $input-focus-color: color("grey", "darken-2") !default;
 $label-font-size: 1rem !default;
 $input-disabled-color: rgba(0,0,0, .26) !default;

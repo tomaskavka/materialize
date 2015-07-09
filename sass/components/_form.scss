@@ -61,6 +61,29 @@ textarea.materialize-textarea {
   @include box-sizing(border-box);
   transition: all .4s;
 
+  // Optional input style
+  .optional & {
+      background-color: transparent;
+      border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+  }
+
+  // Disabled input style
+  &:disabled, &[readonly="readonly"] {
+    border: 1px solid transparent;
+    color: $input-disabled-color;
+    background-color: lighten($input-border-color, 8%);
+  }
+
+  // Disabled label style
+  &:disabled+label, &[readonly="readonly"]+label {
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    color: $input-disabled-color;
+  }
+
   // Focused input style
   &:focus:not([readonly]), .focus &:not([readonly]) {
     background-color: transparent;
@@ -71,29 +94,32 @@ textarea.materialize-textarea {
 
   // Valid Input Style
   .dirty.valid &,
-  .dirty.valid &:focus {
+  .dirty.valid &:focus,
+  .dirty.valid.focus & {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid $input-success-color;
     box-shadow: 0 1px 0 0 $input-success-color;
   }
-  // Invalid Input Style
+
   .dirty.invalid &,
-  .dirty.invalid &:focus {
+  .dirty.invalid &:focus,
+  .dirty.invalid.focus & {
     background-color: lighten($input-error-color, 35%);
     border: 1px solid lighten($input-error-color, 35%);
     border-bottom: 1px solid $input-error-color;
     box-shadow: 0 1px 0 0 $input-error-color;
   }
 
-  // Disabled input style
-  &:disabled, &[readonly="readonly"] {
+  // Invalid Input Style
+  .optional.dirty.invalid &,
+  .optional.dirty.invalid &:focus,
+  .optional.dirty.invalid.focus & {
     color: $input-disabled-color;
-    border-bottom: 1px dotted $input-disabled-color;
-  }
-  // Disabled label style
-  &:disabled+label, &[readonly="readonly"]+label {
-    color: $input-disabled-color;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $input-warning-color;
+    box-shadow: 0 1px 0 0 $input-warning-color;
   }
 }
 
@@ -118,6 +144,7 @@ fieldset {
 .input-field {
   position: relative;
   margin-top: 1rem;
+  @include transition(.4s all);
 
   // Label
   label {
@@ -154,10 +181,55 @@ fieldset {
     @include transition(.4s all);
   }
 
+  // Prefix Icons
+  .prefix {
+    position: absolute;
+    top: 2rem;
+    width: 2.75rem;
+    font-size: 2rem;
+    color: darken($input-border-color, 10%);
+    @include transition(color .2s);
+  }
+
+  .prefix ~ input,
+  .prefix ~ textarea,
+  .prefix ~ .help-text {
+    margin-left: 2.75rem;
+    width: 92%;
+    width: calc(100% - 2.75rem);
+  }
+
+  .prefix ~ textarea {
+    padding-top: .8rem;
+  }
+
+  .prefix ~ label,
+  .prefix ~ .help-text {
+    margin-left: 2.75rem;
+  }
+
+  @media #{$medium-and-down} {
+    .prefix ~ input, .prefix ~ .help-text {
+      width: 86%;
+      width: calc(100% - 2.75rem);
+    }
+  }
+
+  @media #{$small-and-down} {
+    .prefix ~ input, .prefix ~ .help-text {
+      width: 80%;
+      width: calc(100% - 2.75rem);
+    }
+  }
+
   // Focus
   &.focus {
     label {
       color: $input-focus-color;
+    }
+
+    .prefix {
+      color: lighten($input-focus-color, 20%);
     }
 
     .help-text.hint {
@@ -169,6 +241,10 @@ fieldset {
   &.dirty.valid {
     label {
       color: $input-success-color;
+    }
+
+    .prefix {
+      color: lighten($input-success-color, 10%);
     }
 
     .help-text.success {
@@ -183,8 +259,27 @@ fieldset {
       color: $input-error-color;
     }
 
+    .prefix {
+      color: lighten($input-error-color, 10%);
+    }
+
     .help-text.error {
       color: $input-error-color;
+      opacity: 1;
+    }
+  }
+
+  &.optional.dirty.invalid {
+    label {
+      color: $input-warning-color;
+    }
+
+    .prefix {
+      color: lighten($input-warning-color, 10%);
+    }
+
+    .help-text.warning {
+      color: $input-warning-color;
       opacity: 1;
     }
   }
@@ -194,40 +289,14 @@ fieldset {
     opacity: 1;
   }
 
-  &.dirty.invalid .indicators .indicator.error {
+  &.dirty.invalid:not(.optional) .indicators .indicator.error {
     color: lighten($input-error-color, 10%);
     opacity: 1;
   }
 
-  // Prefix Icons
-  .prefix {
-    position: absolute;
-    width: 3rem;
-    font-size: 2rem;
-    @include transition(color .2s);
-
-    &.active { color: $input-focus-color; }
-  }
-  .prefix ~ input,
-  .prefix ~ textarea {
-    margin-left: 3rem;
-    width: 92%;
-    width: calc(100% - 3rem);
-  }
-  .prefix ~ textarea { padding-top: .8rem; }
-  .prefix ~ label { margin-left: 3rem; }
-
-  @media #{$medium-and-down} {
-    .prefix ~ input {
-      width: 86%;
-      width: calc(100% - 3rem);
-    }
-  }
-  @media #{$small-and-down} {
-    .prefix ~ input {
-      width: 80%;
-      width: calc(100% - 3rem);
-    }
+  &.optional.dirty.invalid .indicators .indicator.warning {
+    color: lighten($input-warning-color, 10%);
+    opacity: 1;
   }
 }
 
