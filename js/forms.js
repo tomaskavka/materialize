@@ -1,8 +1,6 @@
 (function ($) {
   $(document).ready(function() {
-    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
-
-    $('.switch label').on('click', function(e) {
+     $('.switch label').on('click', function(e) {
       var target = $(e.target);
 
       if (!target.hasClass('lever') && !target.hasClass('checkbox')) {
