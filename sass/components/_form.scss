@@ -265,7 +265,7 @@ fieldset {
       color: lighten($input-focus-color, 20%);
     }
 
-    &:not(.dirty) .messages .message.help {
+    &:not(.touched) .messages .message.help {
       opacity: 1;
     }
   }

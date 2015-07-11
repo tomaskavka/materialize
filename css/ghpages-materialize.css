@@ -6360,7 +6360,7 @@ fieldset {
     color: #616161; }
   .input-field.focus .prefix {
     color: #949494; }
-  .input-field.focus:not(.dirty) .messages .message.help {
+  .input-field.focus:not(.touched) .messages .message.help {
     opacity: 1; }
   .input-field.dirty.valid label {
     color: #4CAF50; }
