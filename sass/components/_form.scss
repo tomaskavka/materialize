@@ -297,8 +297,10 @@ fieldset {
   }
 
   &.optional.dirty.touched.invalid {
-    label {
-      color: $input-warning-color;
+    &:not(.focus) {
+      label {
+        color: $input-warning-color;
+      }
     }
 
     .prefix {

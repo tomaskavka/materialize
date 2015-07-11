@@ -6373,7 +6373,7 @@ fieldset {
     color: #f77066; }
   .input-field.dirty.touched.invalid:not(.optional) .indicators .error, .input-field.dirty.touched.invalid:not(.optional) .messages .error {
     opacity: 1; }
-  .input-field.optional.dirty.touched.invalid label {
+  .input-field.optional.dirty.touched.invalid:not(.focus) label {
     color: #ffa726; }
   .input-field.optional.dirty.touched.invalid .prefix {
     color: #ffbc59; }
