@@ -6300,15 +6300,32 @@ fieldset {
       -o-transition: .4s all;
       -ms-transition: .4s all;
       transition: .4s all; }
-  .input-field .help-text {
-    font-size: 0.85rem;
-    color: #616161;
-    opacity: 0;
-    -webkit-transition: .4s all;
-    -moz-transition: .4s all;
-    -o-transition: .4s all;
-    -ms-transition: .4s all;
-    transition: .4s all; }
+      .input-field .indicators .indicator.success {
+        color: #6ec071; }
+      .input-field .indicators .indicator.warning {
+        color: #ffbc59; }
+      .input-field .indicators .indicator.error {
+        color: #f77066; }
+  .input-field .messages {
+    position: relative; }
+    .input-field .messages .message {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0.85rem;
+      color: #616161;
+      opacity: 0;
+      -webkit-transition: .4s all;
+      -moz-transition: .4s all;
+      -o-transition: .4s all;
+      -ms-transition: .4s all;
+      transition: .4s all; }
+      .input-field .messages .message.success {
+        color: #4CAF50; }
+      .input-field .messages .message.warning {
+        color: #ffa726; }
+      .input-field .messages .message.error {
+        color: #F44336; }
   .input-field .prefix {
     position: absolute;
     top: 2rem;
@@ -6320,57 +6337,45 @@ fieldset {
     -o-transition: color .2s;
     -ms-transition: color .2s;
     transition: color .2s; }
-  .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ .help-text {
+  .input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ .messages {
     margin-left: 2.75rem;
     width: 92%;
     width: calc(100% - 2.75rem); }
   .input-field .prefix ~ textarea {
     padding-top: .8rem; }
-  .input-field .prefix ~ label, .input-field .prefix ~ .help-text {
+  .input-field .prefix ~ label, .input-field .prefix ~ .messages {
     margin-left: 2.75rem; }
   @media only screen and (max-width : 992px) {
-    .input-field .prefix ~ input, .input-field .prefix ~ .help-text {
+    .input-field .prefix ~ input, .input-field .prefix ~ .messages {
       width: 86%;
       width: calc(100% - 2.75rem); } }
   @media only screen and (max-width : 600px) {
-    .input-field .prefix ~ input, .input-field .prefix ~ .help-text {
+    .input-field .prefix ~ input, .input-field .prefix ~ .messages {
       width: 80%;
       width: calc(100% - 2.75rem); } }
   .input-field.focus label {
     color: #616161; }
   .input-field.focus .prefix {
     color: #949494; }
-  .input-field.focus .help-text.hint {
+  .input-field.focus:not(.dirty) .messages .message.help {
     opacity: 1; }
   .input-field.dirty.valid label {
     color: #4CAF50; }
   .input-field.dirty.valid .prefix {
     color: #6ec071; }
-  .input-field.dirty.valid .help-text.success {
-    color: #4CAF50;
+  .input-field.dirty.valid .indicators .success, .input-field.dirty.valid .messages .message.success {
     opacity: 1; }
   .input-field.dirty.invalid label {
     color: #F44336; }
   .input-field.dirty.invalid .prefix {
     color: #f77066; }
-  .input-field.dirty.invalid .help-text.error {
-    color: #F44336;
+  .input-field.dirty.invalid:not(.optional) .indicators .error, .input-field.dirty.invalid .messages:not(.optional) .error {
     opacity: 1; }
   .input-field.optional.dirty.invalid label {
     color: #ffa726; }
   .input-field.optional.dirty.invalid .prefix {
     color: #ffbc59; }
-  .input-field.optional.dirty.invalid .help-text.warning {
-    color: #ffa726;
-    opacity: 1; }
-  .input-field.dirty.valid .indicators .indicator.success {
-    color: #92cf94;
-    opacity: 1; }
-  .input-field.dirty.invalid:not(.optional) .indicators .indicator.error {
-    color: #f77066;
-    opacity: 1; }
-  .input-field.optional.dirty.invalid .indicators .indicator.warning {
-    color: #ffbc59;
+  .input-field.optional.dirty.invalid .indicators .warning, .input-field.optional.dirty.invalid .messages .warning {
     opacity: 1; }
 
 .input-field input[type=search] {

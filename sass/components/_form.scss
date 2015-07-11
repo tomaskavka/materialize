@@ -166,15 +166,46 @@ fieldset {
       font-size: $input-indicator-size;
       opacity: 0;
       @include transition(.4s all);
+
+      &.success {
+        color: lighten($input-success-color, 10%);
+      }
+
+      &.warning {
+        color: lighten($input-warning-color, 10%);
+      }
+
+      &.error {
+        color: lighten($input-error-color, 10%);
+      }
     }
   }
 
-  // Help text
-  .help-text {
-    font-size: $help-text-font-size;
-    color: $input-focus-color;
-    opacity: 0;
-    @include transition(.4s all);
+  // Messages
+  .messages {
+    position: relative;
+  
+    .message {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: $message-font-size;
+      color: $input-focus-color;
+      opacity: 0;
+      @include transition(.4s all);
+
+      &.success {
+        color: $input-success-color;
+      }
+
+      &.warning {
+        color: $input-warning-color;
+      }
+
+      &.error {
+        color: $input-error-color;
+      }
+    }
   }
 
   // Prefix Icons
@@ -189,7 +220,7 @@ fieldset {
 
   .prefix ~ input,
   .prefix ~ textarea,
-  .prefix ~ .help-text {
+  .prefix ~ .messages {
     margin-left: 2.75rem;
     width: 92%;
     width: calc(100% - 2.75rem);
@@ -200,19 +231,19 @@ fieldset {
   }
 
   .prefix ~ label,
-  .prefix ~ .help-text {
+  .prefix ~ .messages {
     margin-left: 2.75rem;
   }
 
   @media #{$medium-and-down} {
-    .prefix ~ input, .prefix ~ .help-text {
+    .prefix ~ input, .prefix ~ .messages {
       width: 86%;
       width: calc(100% - 2.75rem);
     }
   }
 
   @media #{$small-and-down} {
-    .prefix ~ input, .prefix ~ .help-text {
+    .prefix ~ input, .prefix ~ .messages {
       width: 80%;
       width: calc(100% - 2.75rem);
     }
@@ -228,7 +259,7 @@ fieldset {
       color: lighten($input-focus-color, 20%);
     }
 
-    .help-text.hint {
+    &:not(.dirty) .messages .message.help {
       opacity: 1;
     }
   }
@@ -243,8 +274,7 @@ fieldset {
       color: lighten($input-success-color, 10%);
     }
 
-    .help-text.success {
-      color: $input-success-color;
+    .indicators .success, .messages .message.success {
       opacity: 1;
     }
   }
@@ -259,8 +289,7 @@ fieldset {
       color: lighten($input-error-color, 10%);
     }
 
-    .help-text.error {
-      color: $input-error-color;
+    &:not(.optional) .indicators .error, .messages:not(.optional) .error {
       opacity: 1;
     }
   }
@@ -274,26 +303,10 @@ fieldset {
       color: lighten($input-warning-color, 10%);
     }
 
-    .help-text.warning {
-      color: $input-warning-color;
+    .indicators .warning , .messages .warning {
       opacity: 1;
     }
-  }
-
-  &.dirty.valid .indicators .indicator.success {
-    color: lighten($input-success-color, 20%);
-    opacity: 1;
-  }
-
-  &.dirty.invalid:not(.optional) .indicators .indicator.error {
-    color: lighten($input-error-color, 10%);
-    opacity: 1;
-  }
-
-  &.optional.dirty.invalid .indicators .indicator.warning {
-    color: lighten($input-warning-color, 10%);
-    opacity: 1;
-  }
+  }  
 }
 
 
