@@ -1,33 +1,6 @@
 (function ($) {
   $(document).ready(function() {
     var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
-    $(input_selector)
-      .addClass('pristine')
-      .on('focus', function() {
-        $(this).parent().addClass('focus');
-      })
-      .on('blur', function() {
-        if ($(this).attr('id') === 'firstName') {
-          $(this).parent().addClass('valid');
-          $('.help-text', $(this).parent()).removeClass('hint').addClass('success').html("Great, your child's first name is OK!");
-        }
-        else if ($(this).attr('id') === 'favouritePlayer') {
-          $(this).parent().addClass('valid');
-          $('.help-text', $(this).parent()).removeClass('hint').addClass('success').html("Great, your child's favourite player is OK!");
-        }
-        else {         
-          $(this).parent().addClass('invalid');
-          if ($(this).parent().hasClass('optional')) {
-            $('.help-text', $(this).parent()).removeClass('hint').addClass('warning').html("Your child's favourite football team is optional. Valid is e.g. <strong><i>Tavares</i></strong>.");
-          }
-          else {
-            $('.help-text', $(this).parent()).removeClass('hint').addClass('error').html("Surname is mandatory. Valid is e.g. <strong><i>Slavia Prague</i></strong>.");
-          }
-        }
-        $(this).parent().removeClass('focus');
-        $(this).parent().removeClass('pristine');
-        $(this).parent().addClass('dirty');
-      });
 
     $('.switch label').on('click', function(e) {
       var target = $(e.target);
