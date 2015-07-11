@@ -6293,6 +6293,8 @@ fieldset {
     width: 1.3rem; }
     .input-field .indicators .indicator {
       position: absolute;
+      top: 0;
+      right: 0;
       font-size: 1.3rem;
       opacity: 0;
       -webkit-transition: .4s all;
@@ -6369,7 +6371,7 @@ fieldset {
     color: #F44336; }
   .input-field.dirty.touched.invalid .prefix {
     color: #f77066; }
-  .input-field.dirty.touched.invalid:not(.optional) .indicators .error, .input-field.dirty.touched.invalid .messages:not(.optional) .error {
+  .input-field.dirty.touched.invalid:not(.optional) .indicators .error, .input-field.dirty.touched.invalid:not(.optional) .messages .error {
     opacity: 1; }
   .input-field.optional.dirty.touched.invalid label {
     color: #ffa726; }

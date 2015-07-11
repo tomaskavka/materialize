@@ -163,6 +163,8 @@ fieldset {
 
     .indicator {
       position: absolute;
+      top: 0;
+      right: 0;
       font-size: $input-indicator-size;
       opacity: 0;
       @include transition(.4s all);
@@ -289,7 +291,7 @@ fieldset {
       color: lighten($input-error-color, 10%);
     }
 
-    &:not(.optional) .indicators .error, .messages:not(.optional) .error {
+    &:not(.optional) .indicators .error, &:not(.optional) .messages .error {
       opacity: 1;
     }
   }
