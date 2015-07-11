@@ -7,7 +7,7 @@
 
       if (!target.hasClass('lever') && !target.hasClass('checkbox')) {
         e.preventDefault();
-        var checkbox = $('.checkbox', this);
+        var checkbox = $('.checkbox', this)
 
         if (target.hasClass('on')) {
           checkbox.prop('checked', true);
