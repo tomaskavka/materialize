@@ -97,9 +97,9 @@ textarea.materialize-textarea {
     box-shadow: 0 1px 0 0 $input-success-color;
   }
 
-  .dirty.invalid &,
-  .dirty.invalid &:focus,
-  .dirty.invalid.focus & {
+  .dirty.touched.invalid &,
+  .dirty.touched.invalid &:focus,
+  .dirty.touched.invalid.focus & {
     background-color: lighten($input-error-color, 35%);
     border: 1px solid lighten($input-error-color, 35%);
     border-bottom: 1px solid $input-error-color;
@@ -107,9 +107,9 @@ textarea.materialize-textarea {
   }
 
   // Invalid Input Style
-  .optional.dirty.invalid &,
-  .optional.dirty.invalid &:focus,
-  .optional.dirty.invalid.focus & {
+  .optional.dirty.touched.invalid &,
+  .optional.dirty.touched.invalid &:focus,
+  .optional.dirty.touched.invalid.focus & {
     color: $input-disabled-color;
     background-color: transparent;
     border: 1px solid transparent;
@@ -280,7 +280,7 @@ fieldset {
   }
 
   // Invalid style
-  &.dirty.invalid {
+  &.dirty.touched.invalid {
     label {
       color: $input-error-color;
     }
@@ -294,7 +294,7 @@ fieldset {
     }
   }
 
-  &.optional.dirty.invalid {
+  &.optional.dirty.touched.invalid {
     label {
       color: $input-warning-color;
     }
