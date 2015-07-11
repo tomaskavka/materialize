@@ -110,11 +110,14 @@ textarea.materialize-textarea {
   .optional.dirty.touched.invalid &,
   .optional.dirty.touched.invalid &:focus,
   .optional.dirty.touched.invalid.focus & {
-    color: $input-disabled-color;
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid $input-warning-color;
     box-shadow: 0 1px 0 0 $input-warning-color;
+  }
+
+  .optional.dirty.touched.invalid & {
+    color: $input-disabled-color;
   }
 }
 
@@ -292,15 +295,13 @@ fieldset {
     }
 
     &:not(.optional) .indicators .error, &:not(.optional) .messages .error {
-      opacity: 1;
+      opacity: 1
     }
   }
 
   &.optional.dirty.touched.invalid {
-    &:not(.focus) {
-      label {
-        color: $input-warning-color;
-      }
+    label {
+      color: $input-warning-color;
     }
 
     .prefix {

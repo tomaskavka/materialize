@@ -6249,11 +6249,12 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
     border-bottom: 1px solid #F44336;
     box-shadow: 0 1px 0 0 #F44336; }
   .optional.dirty.touched.invalid input[type=text], .optional.dirty.touched.invalid input[type=text]:focus, .optional.dirty.touched.invalid.focus input[type=text], .optional.dirty.touched.invalid input[type=password], .optional.dirty.touched.invalid input[type=password]:focus, .optional.dirty.touched.invalid.focus input[type=password], .optional.dirty.touched.invalid input[type=email], .optional.dirty.touched.invalid input[type=email]:focus, .optional.dirty.touched.invalid.focus input[type=email], .optional.dirty.touched.invalid input[type=url], .optional.dirty.touched.invalid input[type=url]:focus, .optional.dirty.touched.invalid.focus input[type=url], .optional.dirty.touched.invalid input[type=time], .optional.dirty.touched.invalid input[type=time]:focus, .optional.dirty.touched.invalid.focus input[type=time], .optional.dirty.touched.invalid input[type=date], .optional.dirty.touched.invalid input[type=date]:focus, .optional.dirty.touched.invalid.focus input[type=date], .optional.dirty.touched.invalid input[type=datetime-local], .optional.dirty.touched.invalid input[type=datetime-local]:focus, .optional.dirty.touched.invalid.focus input[type=datetime-local], .optional.dirty.touched.invalid input[type=tel], .optional.dirty.touched.invalid input[type=tel]:focus, .optional.dirty.touched.invalid.focus input[type=tel], .optional.dirty.touched.invalid input[type=number], .optional.dirty.touched.invalid input[type=number]:focus, .optional.dirty.touched.invalid.focus input[type=number], .optional.dirty.touched.invalid input[type=search], .optional.dirty.touched.invalid input[type=search]:focus, .optional.dirty.touched.invalid.focus input[type=search], .optional.dirty.touched.invalid textarea.materialize-textarea, .optional.dirty.touched.invalid textarea.materialize-textarea:focus, .optional.dirty.touched.invalid.focus textarea.materialize-textarea {
-    color: rgba(0, 0, 0, 0.26);
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid #ffa726;
     box-shadow: 0 1px 0 0 #ffa726; }
+  .optional.dirty.touched.invalid input[type=text], .optional.dirty.touched.invalid input[type=password], .optional.dirty.touched.invalid input[type=email], .optional.dirty.touched.invalid input[type=url], .optional.dirty.touched.invalid input[type=time], .optional.dirty.touched.invalid input[type=date], .optional.dirty.touched.invalid input[type=datetime-local], .optional.dirty.touched.invalid input[type=tel], .optional.dirty.touched.invalid input[type=number], .optional.dirty.touched.invalid input[type=search], .optional.dirty.touched.invalid textarea.materialize-textarea {
+    color: rgba(0, 0, 0, 0.26); }
 
 fieldset {
   border: none;
@@ -6373,7 +6374,7 @@ fieldset {
     color: #f77066; }
   .input-field.dirty.touched.invalid:not(.optional) .indicators .error, .input-field.dirty.touched.invalid:not(.optional) .messages .error {
     opacity: 1; }
-  .input-field.optional.dirty.touched.invalid:not(.focus) label {
+  .input-field.optional.dirty.touched.invalid label {
     color: #ffa726; }
   .input-field.optional.dirty.touched.invalid .prefix {
     color: #ffbc59; }
