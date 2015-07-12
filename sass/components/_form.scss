@@ -199,6 +199,7 @@ fieldset {
       color: $input-focus-color;
       opacity: 0;
       @include transition(.4s all);
+      @include transform(translate(0, -1.5rem));
 
       &.success {
         color: $input-success-color;
@@ -210,6 +211,11 @@ fieldset {
 
       &.error {
         color: $input-error-color;
+      }
+
+      &:first-child {
+        position: relative;
+        margin-bottom: .5rem;
       }
     }
   }
@@ -267,6 +273,7 @@ fieldset {
 
     &:not(.touched):not(.valid) .messages .message.help {
       opacity: 1;
+      @include transform(translate(0, 0));
     }
   }
 
@@ -282,6 +289,7 @@ fieldset {
 
     .indicators .success, .messages .message.success {
       opacity: 1;
+      @include transform(translate(0, 0));
     }
   }
 
@@ -296,7 +304,8 @@ fieldset {
     }
 
     &:not(.optional) .indicators .error, &:not(.optional) .messages .error {
-      opacity: 1
+      opacity: 1;
+      @include transform(translate(0, 0));
     }
   }
 
@@ -311,6 +320,7 @@ fieldset {
 
     .indicators .warning , .messages .warning {
       opacity: 1;
+      @include transform(translate(0, 0));
     }
   }  
 }
