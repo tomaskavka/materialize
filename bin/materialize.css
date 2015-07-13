@@ -6233,7 +6233,7 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
     border: 1px solid transparent;
     border-bottom: 1px solid #616161;
     box-shadow: 0 1px 0 0 #616161; }
-  .dirty.success input[type=text], .dirty.success input[type=text]:focus, .dirty.success.focus input[type=text], .dirty.success input[type=password], .dirty.success input[type=password]:focus, .dirty.success.focus input[type=password], .dirty.success input[type=email], .dirty.success input[type=email]:focus, .dirty.success.focus input[type=email], .dirty.success input[type=url], .dirty.success input[type=url]:focus, .dirty.success.focus input[type=url], .dirty.success input[type=time], .dirty.success input[type=time]:focus, .dirty.success.focus input[type=time], .dirty.success input[type=date], .dirty.success input[type=date]:focus, .dirty.success.focus input[type=date], .dirty.success input[type=datetime-local], .dirty.success input[type=datetime-local]:focus, .dirty.success.focus input[type=datetime-local], .dirty.success input[type=tel], .dirty.success input[type=tel]:focus, .dirty.success.focus input[type=tel], .dirty.success input[type=number], .dirty.success input[type=number]:focus, .dirty.success.focus input[type=number], .dirty.success input[type=search], .dirty.success input[type=search]:focus, .dirty.success.focus input[type=search], .dirty.success textarea.materialize-textarea, .dirty.success textarea.materialize-textarea:focus, .dirty.success.focus textarea.materialize-textarea {
+  .dirty.touched.success input[type=text], .dirty.touched.success input[type=text]:focus, .dirty.touched.success.focus input[type=text], .dirty.touched.success input[type=password], .dirty.touched.success input[type=password]:focus, .dirty.touched.success.focus input[type=password], .dirty.touched.success input[type=email], .dirty.touched.success input[type=email]:focus, .dirty.touched.success.focus input[type=email], .dirty.touched.success input[type=url], .dirty.touched.success input[type=url]:focus, .dirty.touched.success.focus input[type=url], .dirty.touched.success input[type=time], .dirty.touched.success input[type=time]:focus, .dirty.touched.success.focus input[type=time], .dirty.touched.success input[type=date], .dirty.touched.success input[type=date]:focus, .dirty.touched.success.focus input[type=date], .dirty.touched.success input[type=datetime-local], .dirty.touched.success input[type=datetime-local]:focus, .dirty.touched.success.focus input[type=datetime-local], .dirty.touched.success input[type=tel], .dirty.touched.success input[type=tel]:focus, .dirty.touched.success.focus input[type=tel], .dirty.touched.success input[type=number], .dirty.touched.success input[type=number]:focus, .dirty.touched.success.focus input[type=number], .dirty.touched.success input[type=search], .dirty.touched.success input[type=search]:focus, .dirty.touched.success.focus input[type=search], .dirty.touched.success textarea.materialize-textarea, .dirty.touched.success textarea.materialize-textarea:focus, .dirty.touched.success.focus textarea.materialize-textarea {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid #4CAF50;
@@ -6305,11 +6305,14 @@ fieldset {
       .input-field .indicators .indicator.error {
         color: #f77066; }
       .input-field .indicators .indicator.show {
-        opacity: 1; }
+        opacity: 0; }
+  .input-field.dirty.touched .indicator.show {
+    opacity: 1; }
   .input-field .messages {
     position: relative; }
     .input-field .messages .message {
       position: absolute;
+      z-index: -1;
       top: 0;
       left: 0;
       font-size: 0.85rem;
@@ -6334,13 +6337,14 @@ fieldset {
       .input-field .messages .message:first-child {
         position: relative;
         margin-bottom: .5rem; }
-      .input-field .messages .message.show {
-        opacity: 1;
-        -webkit-transform: translate(0, 0);
-        -moz-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        -o-transform: translate(0, 0);
-        transform: translate(0, 0); }
+  .input-field.dirty.touched .message.show {
+    z-index: 0;
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
   .input-field .prefix {
     position: absolute;
     top: 2rem;
@@ -6372,9 +6376,9 @@ fieldset {
     color: #616161; }
   .input-field.focus .prefix {
     color: #949494; }
-  .input-field.dirty.success label {
+  .input-field.dirty.touched.success label {
     color: #4CAF50; }
-  .input-field.dirty.success .prefix {
+  .input-field.dirty.touched.success .prefix {
     color: #6ec071; }
   .input-field.dirty.touched.error label {
     color: #F44336; }

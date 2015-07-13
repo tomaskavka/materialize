@@ -80,9 +80,9 @@ textarea.materialize-textarea {
   }
 
   // Success Input Style
-  .dirty.success &,
-  .dirty.success &:focus,
-  .dirty.success.focus & {
+  .dirty.touched.success &,
+  .dirty.touched.success &:focus,
+  .dirty.touched.success.focus & {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid $input-success-color;
@@ -175,10 +175,15 @@ fieldset {
       &.error {
         color: lighten($input-error-color, 10%);
       }
+
       &.show {
-        opacity: 1;
+        opacity: 0;
       }
     }
+  }
+
+  &.dirty.touched .indicator.show {
+    opacity: 1;
   }
 
   // Messages
@@ -187,6 +192,7 @@ fieldset {
   
     .message {
       position: absolute;
+      z-index: -1;
       top: 0;
       left: 0;
       font-size: $message-font-size;
@@ -211,13 +217,15 @@ fieldset {
         position: relative;
         margin-bottom: .5rem;
       }
-
-      &.show {
-        opacity: 1;
-        @include transform(translate(0, 0));
-      } 
     }
   }
+
+  &.dirty.touched .message.show {
+    z-index: 0;
+    opacity: 1;
+    @include transform(translate(0, 0));
+  }
+
 
   // Prefix Icons
   .prefix {
@@ -272,7 +280,7 @@ fieldset {
   }
 
   // success style
-  &.dirty.success {
+  &.dirty.touched.success {
     label {
       color: $input-success-color;
     }
