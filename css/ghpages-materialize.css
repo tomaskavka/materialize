@@ -6228,32 +6228,27 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
     border: 1px solid transparent;
     color: rgba(0, 0, 0, 0.26);
     background-color: #f4f4f4; }
-  input[type=text]:disabled + label, input[type=text][readonly="readonly"] + label, input[type=password]:disabled + label, input[type=password][readonly="readonly"] + label, input[type=email]:disabled + label, input[type=email][readonly="readonly"] + label, input[type=url]:disabled + label, input[type=url][readonly="readonly"] + label, input[type=time]:disabled + label, input[type=time][readonly="readonly"] + label, input[type=date]:disabled + label, input[type=date][readonly="readonly"] + label, input[type=datetime-local]:disabled + label, input[type=datetime-local][readonly="readonly"] + label, input[type=tel]:disabled + label, input[type=tel][readonly="readonly"] + label, input[type=number]:disabled + label, input[type=number][readonly="readonly"] + label, input[type=search]:disabled + label, input[type=search][readonly="readonly"] + label, textarea.materialize-textarea:disabled + label, textarea.materialize-textarea[readonly="readonly"] + label {
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    color: rgba(0, 0, 0, 0.26); }
   input[type=text]:focus:not([readonly]), .focus input[type=text]:not([readonly]), input[type=password]:focus:not([readonly]), .focus input[type=password]:not([readonly]), input[type=email]:focus:not([readonly]), .focus input[type=email]:not([readonly]), input[type=url]:focus:not([readonly]), .focus input[type=url]:not([readonly]), input[type=time]:focus:not([readonly]), .focus input[type=time]:not([readonly]), input[type=date]:focus:not([readonly]), .focus input[type=date]:not([readonly]), input[type=datetime-local]:focus:not([readonly]), .focus input[type=datetime-local]:not([readonly]), input[type=tel]:focus:not([readonly]), .focus input[type=tel]:not([readonly]), input[type=number]:focus:not([readonly]), .focus input[type=number]:not([readonly]), input[type=search]:focus:not([readonly]), .focus input[type=search]:not([readonly]), textarea.materialize-textarea:focus:not([readonly]), .focus textarea.materialize-textarea:not([readonly]) {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid #616161;
     box-shadow: 0 1px 0 0 #616161; }
-  .dirty.valid input[type=text], .dirty.valid input[type=text]:focus, .dirty.valid.focus input[type=text], .dirty.valid input[type=password], .dirty.valid input[type=password]:focus, .dirty.valid.focus input[type=password], .dirty.valid input[type=email], .dirty.valid input[type=email]:focus, .dirty.valid.focus input[type=email], .dirty.valid input[type=url], .dirty.valid input[type=url]:focus, .dirty.valid.focus input[type=url], .dirty.valid input[type=time], .dirty.valid input[type=time]:focus, .dirty.valid.focus input[type=time], .dirty.valid input[type=date], .dirty.valid input[type=date]:focus, .dirty.valid.focus input[type=date], .dirty.valid input[type=datetime-local], .dirty.valid input[type=datetime-local]:focus, .dirty.valid.focus input[type=datetime-local], .dirty.valid input[type=tel], .dirty.valid input[type=tel]:focus, .dirty.valid.focus input[type=tel], .dirty.valid input[type=number], .dirty.valid input[type=number]:focus, .dirty.valid.focus input[type=number], .dirty.valid input[type=search], .dirty.valid input[type=search]:focus, .dirty.valid.focus input[type=search], .dirty.valid textarea.materialize-textarea, .dirty.valid textarea.materialize-textarea:focus, .dirty.valid.focus textarea.materialize-textarea {
+  .dirty.success input[type=text], .dirty.success input[type=text]:focus, .dirty.success.focus input[type=text], .dirty.success input[type=password], .dirty.success input[type=password]:focus, .dirty.success.focus input[type=password], .dirty.success input[type=email], .dirty.success input[type=email]:focus, .dirty.success.focus input[type=email], .dirty.success input[type=url], .dirty.success input[type=url]:focus, .dirty.success.focus input[type=url], .dirty.success input[type=time], .dirty.success input[type=time]:focus, .dirty.success.focus input[type=time], .dirty.success input[type=date], .dirty.success input[type=date]:focus, .dirty.success.focus input[type=date], .dirty.success input[type=datetime-local], .dirty.success input[type=datetime-local]:focus, .dirty.success.focus input[type=datetime-local], .dirty.success input[type=tel], .dirty.success input[type=tel]:focus, .dirty.success.focus input[type=tel], .dirty.success input[type=number], .dirty.success input[type=number]:focus, .dirty.success.focus input[type=number], .dirty.success input[type=search], .dirty.success input[type=search]:focus, .dirty.success.focus input[type=search], .dirty.success textarea.materialize-textarea, .dirty.success textarea.materialize-textarea:focus, .dirty.success.focus textarea.materialize-textarea {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid #4CAF50;
     box-shadow: 0 1px 0 0 #4CAF50; }
-  .dirty.touched.invalid input[type=text], .dirty.touched.invalid input[type=text]:focus, .dirty.touched.invalid.focus input[type=text], .dirty.touched.invalid input[type=password], .dirty.touched.invalid input[type=password]:focus, .dirty.touched.invalid.focus input[type=password], .dirty.touched.invalid input[type=email], .dirty.touched.invalid input[type=email]:focus, .dirty.touched.invalid.focus input[type=email], .dirty.touched.invalid input[type=url], .dirty.touched.invalid input[type=url]:focus, .dirty.touched.invalid.focus input[type=url], .dirty.touched.invalid input[type=time], .dirty.touched.invalid input[type=time]:focus, .dirty.touched.invalid.focus input[type=time], .dirty.touched.invalid input[type=date], .dirty.touched.invalid input[type=date]:focus, .dirty.touched.invalid.focus input[type=date], .dirty.touched.invalid input[type=datetime-local], .dirty.touched.invalid input[type=datetime-local]:focus, .dirty.touched.invalid.focus input[type=datetime-local], .dirty.touched.invalid input[type=tel], .dirty.touched.invalid input[type=tel]:focus, .dirty.touched.invalid.focus input[type=tel], .dirty.touched.invalid input[type=number], .dirty.touched.invalid input[type=number]:focus, .dirty.touched.invalid.focus input[type=number], .dirty.touched.invalid input[type=search], .dirty.touched.invalid input[type=search]:focus, .dirty.touched.invalid.focus input[type=search], .dirty.touched.invalid textarea.materialize-textarea, .dirty.touched.invalid textarea.materialize-textarea:focus, .dirty.touched.invalid.focus textarea.materialize-textarea {
+  .dirty.touched.error input[type=text], .dirty.touched.error input[type=text]:focus, .dirty.touched.error.focus input[type=text], .dirty.touched.error input[type=password], .dirty.touched.error input[type=password]:focus, .dirty.touched.error.focus input[type=password], .dirty.touched.error input[type=email], .dirty.touched.error input[type=email]:focus, .dirty.touched.error.focus input[type=email], .dirty.touched.error input[type=url], .dirty.touched.error input[type=url]:focus, .dirty.touched.error.focus input[type=url], .dirty.touched.error input[type=time], .dirty.touched.error input[type=time]:focus, .dirty.touched.error.focus input[type=time], .dirty.touched.error input[type=date], .dirty.touched.error input[type=date]:focus, .dirty.touched.error.focus input[type=date], .dirty.touched.error input[type=datetime-local], .dirty.touched.error input[type=datetime-local]:focus, .dirty.touched.error.focus input[type=datetime-local], .dirty.touched.error input[type=tel], .dirty.touched.error input[type=tel]:focus, .dirty.touched.error.focus input[type=tel], .dirty.touched.error input[type=number], .dirty.touched.error input[type=number]:focus, .dirty.touched.error.focus input[type=number], .dirty.touched.error input[type=search], .dirty.touched.error input[type=search]:focus, .dirty.touched.error.focus input[type=search], .dirty.touched.error textarea.materialize-textarea, .dirty.touched.error textarea.materialize-textarea:focus, .dirty.touched.error.focus textarea.materialize-textarea {
     background-color: #fde1df;
     border: 1px solid #fde1df;
     border-bottom: 1px solid #F44336;
     box-shadow: 0 1px 0 0 #F44336; }
-  .optional.dirty.touched.invalid input[type=text], .optional.dirty.touched.invalid input[type=text]:focus, .optional.dirty.touched.invalid.focus input[type=text], .optional.dirty.touched.invalid input[type=password], .optional.dirty.touched.invalid input[type=password]:focus, .optional.dirty.touched.invalid.focus input[type=password], .optional.dirty.touched.invalid input[type=email], .optional.dirty.touched.invalid input[type=email]:focus, .optional.dirty.touched.invalid.focus input[type=email], .optional.dirty.touched.invalid input[type=url], .optional.dirty.touched.invalid input[type=url]:focus, .optional.dirty.touched.invalid.focus input[type=url], .optional.dirty.touched.invalid input[type=time], .optional.dirty.touched.invalid input[type=time]:focus, .optional.dirty.touched.invalid.focus input[type=time], .optional.dirty.touched.invalid input[type=date], .optional.dirty.touched.invalid input[type=date]:focus, .optional.dirty.touched.invalid.focus input[type=date], .optional.dirty.touched.invalid input[type=datetime-local], .optional.dirty.touched.invalid input[type=datetime-local]:focus, .optional.dirty.touched.invalid.focus input[type=datetime-local], .optional.dirty.touched.invalid input[type=tel], .optional.dirty.touched.invalid input[type=tel]:focus, .optional.dirty.touched.invalid.focus input[type=tel], .optional.dirty.touched.invalid input[type=number], .optional.dirty.touched.invalid input[type=number]:focus, .optional.dirty.touched.invalid.focus input[type=number], .optional.dirty.touched.invalid input[type=search], .optional.dirty.touched.invalid input[type=search]:focus, .optional.dirty.touched.invalid.focus input[type=search], .optional.dirty.touched.invalid textarea.materialize-textarea, .optional.dirty.touched.invalid textarea.materialize-textarea:focus, .optional.dirty.touched.invalid.focus textarea.materialize-textarea {
+  .dirty.touched.warning input[type=text], .dirty.touched.warning input[type=text]:focus, .dirty.touched.warning.focus input[type=text], .dirty.touched.warning input[type=password], .dirty.touched.warning input[type=password]:focus, .dirty.touched.warning.focus input[type=password], .dirty.touched.warning input[type=email], .dirty.touched.warning input[type=email]:focus, .dirty.touched.warning.focus input[type=email], .dirty.touched.warning input[type=url], .dirty.touched.warning input[type=url]:focus, .dirty.touched.warning.focus input[type=url], .dirty.touched.warning input[type=time], .dirty.touched.warning input[type=time]:focus, .dirty.touched.warning.focus input[type=time], .dirty.touched.warning input[type=date], .dirty.touched.warning input[type=date]:focus, .dirty.touched.warning.focus input[type=date], .dirty.touched.warning input[type=datetime-local], .dirty.touched.warning input[type=datetime-local]:focus, .dirty.touched.warning.focus input[type=datetime-local], .dirty.touched.warning input[type=tel], .dirty.touched.warning input[type=tel]:focus, .dirty.touched.warning.focus input[type=tel], .dirty.touched.warning input[type=number], .dirty.touched.warning input[type=number]:focus, .dirty.touched.warning.focus input[type=number], .dirty.touched.warning input[type=search], .dirty.touched.warning input[type=search]:focus, .dirty.touched.warning.focus input[type=search], .dirty.touched.warning textarea.materialize-textarea, .dirty.touched.warning textarea.materialize-textarea:focus, .dirty.touched.warning.focus textarea.materialize-textarea {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid #ffa726;
     box-shadow: 0 1px 0 0 #ffa726; }
-  .optional.dirty.touched.invalid:not(.focus) input[type=text], .optional.dirty.touched.invalid input[type=text]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=password], .optional.dirty.touched.invalid input[type=password]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=email], .optional.dirty.touched.invalid input[type=email]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=url], .optional.dirty.touched.invalid input[type=url]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=time], .optional.dirty.touched.invalid input[type=time]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=date], .optional.dirty.touched.invalid input[type=date]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=datetime-local], .optional.dirty.touched.invalid input[type=datetime-local]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=tel], .optional.dirty.touched.invalid input[type=tel]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=number], .optional.dirty.touched.invalid input[type=number]:not(:focus), .optional.dirty.touched.invalid:not(.focus) input[type=search], .optional.dirty.touched.invalid input[type=search]:not(:focus), .optional.dirty.touched.invalid:not(.focus) textarea.materialize-textarea, .optional.dirty.touched.invalid textarea.materialize-textarea:not(:focus) {
+  .dirty.touched.warning:not(.focus) input[type=text], .dirty.touched.warning input[type=text]:not(:focus), .dirty.touched.warning:not(.focus) input[type=password], .dirty.touched.warning input[type=password]:not(:focus), .dirty.touched.warning:not(.focus) input[type=email], .dirty.touched.warning input[type=email]:not(:focus), .dirty.touched.warning:not(.focus) input[type=url], .dirty.touched.warning input[type=url]:not(:focus), .dirty.touched.warning:not(.focus) input[type=time], .dirty.touched.warning input[type=time]:not(:focus), .dirty.touched.warning:not(.focus) input[type=date], .dirty.touched.warning input[type=date]:not(:focus), .dirty.touched.warning:not(.focus) input[type=datetime-local], .dirty.touched.warning input[type=datetime-local]:not(:focus), .dirty.touched.warning:not(.focus) input[type=tel], .dirty.touched.warning input[type=tel]:not(:focus), .dirty.touched.warning:not(.focus) input[type=number], .dirty.touched.warning input[type=number]:not(:focus), .dirty.touched.warning:not(.focus) input[type=search], .dirty.touched.warning input[type=search]:not(:focus), .dirty.touched.warning:not(.focus) textarea.materialize-textarea, .dirty.touched.warning textarea.materialize-textarea:not(:focus) {
     color: rgba(0, 0, 0, 0.26); }
 
 fieldset {
@@ -6285,7 +6280,7 @@ fieldset {
     -o-transition: .4s all;
     -ms-transition: .4s all;
     transition: .4s all; }
-    .input-field label.valid {
+    .input-field label.success {
       color: #4CAF50; }
   .input-field .indicators {
     position: absolute;
@@ -6309,6 +6304,8 @@ fieldset {
         color: #ffbc59; }
       .input-field .indicators .indicator.error {
         color: #f77066; }
+      .input-field .indicators .indicator.show {
+        opacity: 1; }
   .input-field .messages {
     position: relative; }
     .input-field .messages .message {
@@ -6337,6 +6334,13 @@ fieldset {
       .input-field .messages .message:first-child {
         position: relative;
         margin-bottom: .5rem; }
+      .input-field .messages .message.show {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0); }
   .input-field .prefix {
     position: absolute;
     top: 2rem;
@@ -6368,46 +6372,18 @@ fieldset {
     color: #616161; }
   .input-field.focus .prefix {
     color: #949494; }
-  .input-field.focus:not(.touched):not(.valid) .messages .message.help {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0); }
-  .input-field.dirty.valid label {
+  .input-field.dirty.success label {
     color: #4CAF50; }
-  .input-field.dirty.valid .prefix {
+  .input-field.dirty.success .prefix {
     color: #6ec071; }
-  .input-field.dirty.valid .indicators .success, .input-field.dirty.valid .messages .message.success {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0); }
-  .input-field.dirty.touched.invalid label {
+  .input-field.dirty.touched.error label {
     color: #F44336; }
-  .input-field.dirty.touched.invalid .prefix {
+  .input-field.dirty.touched.error .prefix {
     color: #f77066; }
-  .input-field.dirty.touched.invalid:not(.optional) .indicators .error, .input-field.dirty.touched.invalid:not(.optional) .messages .error {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0); }
-  .input-field.optional.dirty.touched.invalid label {
+  .input-field.dirty.touched.warning label {
     color: #ffa726; }
-  .input-field.optional.dirty.touched.invalid .prefix {
+  .input-field.dirty.touched.warning .prefix {
     color: #ffbc59; }
-  .input-field.optional.dirty.touched.invalid .indicators .warning, .input-field.optional.dirty.touched.invalid .messages .warning {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0); }
 
 .input-field input[type=search] {
   display: block;

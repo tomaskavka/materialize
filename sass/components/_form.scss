@@ -71,14 +71,6 @@ textarea.materialize-textarea {
     background-color: lighten($input-border-color, 8%);
   }
 
-  // Disabled label style
-  &:disabled+label, &[readonly="readonly"]+label {
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    color: $input-disabled-color;
-  }
-
   // Focused input style
   &:focus:not([readonly]), .focus &:not([readonly]) {
     background-color: transparent;
@@ -87,37 +79,37 @@ textarea.materialize-textarea {
     box-shadow: 0 1px 0 0 $input-focus-color;
   }
 
-  // Valid Input Style
-  .dirty.valid &,
-  .dirty.valid &:focus,
-  .dirty.valid.focus & {
+  // Success Input Style
+  .dirty.success &,
+  .dirty.success &:focus,
+  .dirty.success.focus & {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid $input-success-color;
     box-shadow: 0 1px 0 0 $input-success-color;
   }
 
-  .dirty.touched.invalid &,
-  .dirty.touched.invalid &:focus,
-  .dirty.touched.invalid.focus & {
+  .dirty.touched.error &,
+  .dirty.touched.error &:focus,
+  .dirty.touched.error.focus & {
     background-color: lighten($input-error-color, 35%);
     border: 1px solid lighten($input-error-color, 35%);
     border-bottom: 1px solid $input-error-color;
     box-shadow: 0 1px 0 0 $input-error-color;
   }
 
-  // Invalid Input Style
-  .optional.dirty.touched.invalid &,
-  .optional.dirty.touched.invalid &:focus,
-  .optional.dirty.touched.invalid.focus & {
+  // Warning Input Style
+  .dirty.touched.warning &,
+  .dirty.touched.warning &:focus,
+  .dirty.touched.warning.focus & {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid $input-warning-color;
     box-shadow: 0 1px 0 0 $input-warning-color;
   }
 
-  .optional.dirty.touched.invalid:not(.focus) &,
-  .optional.dirty.touched.invalid &:not(:focus) {
+  .dirty.touched.warning:not(.focus) &,
+  .dirty.touched.warning &:not(:focus) {
     color: $input-disabled-color;
   }
 }
@@ -152,8 +144,7 @@ fieldset {
     font-weight: 300;
     @include transition(.4s all);
 
-
-    &.valid {
+    &.success {
       color: $input-success-color;      
     }
   }
@@ -183,6 +174,9 @@ fieldset {
 
       &.error {
         color: lighten($input-error-color, 10%);
+      }
+      &.show {
+        opacity: 1;
       }
     }
   }
@@ -217,6 +211,11 @@ fieldset {
         position: relative;
         margin-bottom: .5rem;
       }
+
+      &.show {
+        opacity: 1;
+        @include transform(translate(0, 0));
+      } 
     }
   }
 
@@ -270,15 +269,10 @@ fieldset {
     .prefix {
       color: lighten($input-focus-color, 20%);
     }
-
-    &:not(.touched):not(.valid) .messages .message.help {
-      opacity: 1;
-      @include transform(translate(0, 0));
-    }
   }
 
-  // Valid style
-  &.dirty.valid {
+  // success style
+  &.dirty.success {
     label {
       color: $input-success-color;
     }
@@ -286,15 +280,10 @@ fieldset {
     .prefix {
       color: lighten($input-success-color, 10%);
     }
-
-    .indicators .success, .messages .message.success {
-      opacity: 1;
-      @include transform(translate(0, 0));
-    }
   }
 
-  // Invalid style
-  &.dirty.touched.invalid {
+  // Error style
+  &.dirty.touched.error {
     label {
       color: $input-error-color;
     }
@@ -302,14 +291,9 @@ fieldset {
     .prefix {
       color: lighten($input-error-color, 10%);
     }
-
-    &:not(.optional) .indicators .error, &:not(.optional) .messages .error {
-      opacity: 1;
-      @include transform(translate(0, 0));
-    }
   }
 
-  &.optional.dirty.touched.invalid {
+  &.dirty.touched.warning {
     label {
       color: $input-warning-color;
     }
@@ -317,12 +301,7 @@ fieldset {
     .prefix {
       color: lighten($input-warning-color, 10%);
     }
-
-    .indicators .warning , .messages .warning {
-      opacity: 1;
-      @include transform(translate(0, 0));
-    }
-  }  
+  }
 }
 
 
