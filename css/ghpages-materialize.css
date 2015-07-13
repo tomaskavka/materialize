@@ -6258,13 +6258,13 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
 
 fieldset {
   border: none;
-  border-left: 3px solid #ededed;
-  padding: 0rem 0.75rem; }
+  border-bottom: 1px solid #f4f4f4;
+  padding: 0;
+  margin-bottom: 2rem; }
   fieldset legend {
     font-size: 1.6rem;
     color: #616161;
-    padding: 0;
-    padding-top: 1.6rem; }
+    padding: 0; }
   fieldset .row {
     margin: 0 0 5px 0; }
 
