@@ -108,8 +108,8 @@ textarea.materialize-textarea {
     box-shadow: 0 1px 0 0 $input-warning-color;
   }
 
-  .dirty.touched.warning:not(.focus) &,
-  .dirty.touched.warning &:not(:focus) {
+  .optional.dirty.touched.warning:not(.focus) &,
+  .optional.dirty.touched.warning &:not(:focus) {
     color: $input-disabled-color;
   }
 }
