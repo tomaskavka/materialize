@@ -99,9 +99,16 @@ textarea.materialize-textarea {
   }
 
   // Warning Input Style
-  .dirty.touched.warning &,
-  .dirty.touched.warning &:focus,
-  .dirty.touched.warning.focus & {
+  .dirty.touched.warning:not(.focus) &,
+  .dirty.touched.warning &:not(:focus) {
+    color: color('grey', 'base');
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $input-border-color;
+    box-shadow: 0 1px 0 0 $input-border-color;
+  }
+
+  .optional.dirty.touched.warning & {
     background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid $input-warning-color;
@@ -301,7 +308,7 @@ fieldset {
     }
   }
 
-  &.dirty.touched.warning {
+  &.optional.dirty.touched.warning {
     label {
       color: $input-warning-color;
     }
